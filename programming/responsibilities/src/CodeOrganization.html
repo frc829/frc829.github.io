@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>FRC Robot Programming Org Chart — Filterable Tree</title>
+        <link rel="stylesheet" href="styles/code-org-styles.css">
+    </head>
+    <body>
+        <div class=" app
+        " role="application" aria-label="FRC Org Chart">
+            <header>
+                <h1>FRC Robot Programming Org Chart — Filterable Tree</h1>
+                <div class="controls">
+                    <input id="search" type="search"
+                           placeholder="Type to filter (e.g., Choreo, Limelight, Triggers, swerve)"
+                           aria-label="Search tree"/>
+                    <button id="expandAll" title="Expand all">Expand all</button>
+                    <button id="collapseAll" title="Collapse all">Collapse all</button>
+                    <button id="reset" title="Reset search & view">Reset</button>
+                </div>
+            </header>
+
+            <ul id="tree" class="tree" role="tree" aria-multiselectable="false">
+                <li class="node expanded" role="treeitem" aria-expanded="true" tabindex="0">
+                    <div class="label"><span class="chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+               stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+        </span><span class="path">Robot.java</span><span class="meta">(no RobotContainer; no default commands)</span>
+                    </div>
+                    <ul class="children" role="group">
+                        <li class="node expanded" role="treeitem" aria-expanded="true">
+                            <div class="label"><span class="chev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+            </span><span class="path">config/</span></div>
+                            <ul class="children" role="group">
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">Constants.java</span></div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">Ports.java</span><span class="meta">CAN, DIO, PWM</span></div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">Gains.java</span><span
+                                            class="meta">FF/PD, profiles, current limits</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="node expanded" role="treeitem" aria-expanded="true">
+                            <div class="label"><span class="chev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+            </span><span class="path">infra/</span></div>
+                            <ul class="children" role="group">
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">EpilogueLogger.java</span><span
+                                            class="meta">logging (persisted)</span>
+                                    </div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">NtLiveDashboard.java</span><span class="meta">NetworkTables (live only)</span>
+                                    </div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">Controllers.java</span><span
+                                            class="meta">CommandXboxController</span></div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">ModeSignals.java</span><span
+                                            class="meta">RobotMode triggers</span></div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">Triggers.java</span><span
+                                            class="meta">all button/robot-mode bindings</span></div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="node expanded" role="treeitem" aria-expanded="true">
+                            <div class="label"><span class="chev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+            </span><span class="path">subsystems/</span></div>
+                            <ul class="children" role="group">
+                                <li class="node expanded" role="treeitem" aria-expanded="true">
+                                    <div class="label"><span class="chev">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                       stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+                </span><span class="path">swerve/</span></div>
+                                    <ul class="children" role="group">
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">SwerveSubsystem.java</span>
+                                            </div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">SwerveModule.java</span><span
+                                                    class="meta">reusable per-corner</span></div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">SwerveKinematicsHelper.java</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">IntakeSubsystem.java</span></div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">ShooterSubsystem.java</span>
+                                    </div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">ElevatorSubsystem.java</span>
+                                    </div>
+                                </li>
+                                <li class="node expanded" role="treeitem" aria-expanded="true">
+                                    <div class="label"><span class="chev">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                       stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+                </span><span class="path">common/</span></div>
+                                    <ul class="children" role="group">
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">PositionController.java</span><span
+                                                    class="meta">Expo + FF + PD</span></div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">VelocityController.java</span><span
+                                                    class="meta">Profiled + FF + P</span></div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">ProfileGenerators.java</span>
+                                            </div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">ReusableMotorIO.java</span><span
+                                                    class="meta">vendor-agnostic</span></div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="node expanded" role="treeitem" aria-expanded="true">
+                            <div class="label"><span class="chev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+            </span><span class="path">commands/</span></div>
+                            <ul class="children" role="group">
+                                <li class="node expanded" role="treeitem" aria-expanded="true">
+                                    <div class="label"><span class="chev">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                       stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+                </span><span class="path">teleop/</span></div>
+                                    <ul class="children" role="group">
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">SwerveDriveFieldCentric.java</span>
+                                            </div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">SwerveDriveRobotCentric.java</span>
+                                            </div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">SwerveDriveClock.java</span><span
+                                                    class="meta">field-centric facing angle</span></div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">GoToPoseButton.java</span>
+                                            </div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">ManualVelocityNudge.java</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="node expanded" role="treeitem" aria-expanded="true">
+                                    <div class="label"><span class="chev">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                       stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+                </span><span class="path">autos/</span></div>
+                                    <ul class="children" role="group">
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span class="path">RunChoreoPath.java</span><span
+                                                    class="meta">follow Choreo path</span></div>
+                                        </li>
+                                        <li class="node leaf" role="treeitem">
+                                            <div class="label"><span class="chev"></span><span
+                                                    class="path">AutoFactory.java</span><span
+                                                    class="meta">chooser + one-liners</span></div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">ZeroSensors.java</span></div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="node expanded" role="treeitem" aria-expanded="true">
+                            <div class="label"><span class="chev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+            </span><span class="path">vision/</span></div>
+                            <ul class="children" role="group">
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">LimelightPose.java</span><span
+                                            class="meta">LL 3G+ AprilTag</span></div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">VisionFusion.java</span><span
+                                            class="meta">odometry fusion</span></div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">ObjectDetection.java</span><span class="meta">optional</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="node expanded" role="treeitem" aria-expanded="true">
+                            <div class="label"><span class="chev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+            </span><span class="path">sim/</span></div>
+                            <ul class="children" role="group">
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">SimClock1ms.java</span><span
+                                            class="meta">Notifier @ 1 ms</span></div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">SwerveSimDevices.java</span>
+                                    </div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">SubsystemSims.java</span></div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="node expanded" role="treeitem" aria-expanded="true">
+                            <div class="label"><span class="chev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M8 4l8 8-8 8"/></svg>
+            </span><span class="path">util/</span></div>
+                            <ul class="children" role="group">
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span
+                                            class="path">UnitsUtil.java</span></div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span class="path">Filters.java</span>
+                                    </div>
+                                </li>
+                                <li class="node leaf" role="treeitem">
+                                    <div class="label"><span class="chev"></span><span class="path">Safety.java</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <footer>
+                <p>Filter mode: Only matching nodes and their ancestors remain visible. Click nodes to toggle, or use
+                    <span class="kbd">→</span>/<span class="kbd">←</span> for expand/collapse.</p>
+            </footer>
+        </div>
+
+        <script src="scripts/code-org-scripts.js"></script>
+    </body>
+</html>
